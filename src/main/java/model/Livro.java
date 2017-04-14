@@ -1,6 +1,6 @@
 package model;
 
-public class Livro 
+public abstract class Livro 
 {
 
 }
