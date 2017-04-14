@@ -1,6 +1,6 @@
 package model;
 
-public class LeitorClasseA implements ILeitorClasseA
-{
+public class LeitorClasseA extends Pagamento implements ILeitorClasseA
+{	
 
 }
