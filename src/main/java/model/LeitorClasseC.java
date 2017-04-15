@@ -7,9 +7,14 @@ public class LeitorClasseC extends Pagamento implements ILeitorClasseC
 	private String CPF;
 	private String situacao;
 	
-	public LeitorClasseC(int idPagamento, double valor, String forma)
+	public LeitorClasseC(int idPagamento, double valor, String forma, 
+							int idLeitorC, String nome, String CPF, String situacao)
 	{
 		super(idPagamento, valor, forma);
+		this.idLeitorC = idLeitorC;
+		this.nome = nome;
+		this.CPF = CPF;
+		this.situacao = situacao;
 	}
 	
 	@Override
@@ -38,9 +43,9 @@ public class LeitorClasseC extends Pagamento implements ILeitorClasseC
 		return CPF;
 	}
 
-	public void setCPF(String cPF) 
+	public void setCPF(String cpf) 
 	{
-		CPF = cPF;
+		CPF = cpf;
 	}
 
 	public String getSituacao() 

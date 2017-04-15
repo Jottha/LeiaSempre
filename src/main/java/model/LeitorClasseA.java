@@ -7,9 +7,14 @@ public class LeitorClasseA extends Pagamento implements ILeitorClasseA
 	private String CPF;
 	private String situacao;
 		
-	public LeitorClasseA(int idPagamento, double valor, String forma) 
+	public LeitorClasseA(int idPagamento, double valor, String forma, 
+							int idLeitorA, String nome, String CPF, String situacao) 
 	{
 		super(idPagamento, valor, forma);
+		this.idLeitorA = idLeitorA;
+		this.nome = nome;
+		this.CPF = CPF;
+		this.situacao = situacao;
 	}
 	
 	@Override
@@ -38,8 +43,9 @@ public class LeitorClasseA extends Pagamento implements ILeitorClasseA
 		return CPF;
 	}
 
-	public void setCPF(String cPF) {
-		CPF = cPF;
+	public void setCPF(String cpf) 
+	{
+		CPF = cpf;
 		//alterar
 	}
 
