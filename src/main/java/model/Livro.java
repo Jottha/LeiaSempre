@@ -17,7 +17,7 @@ public abstract class Livro
 	@Column
 	private String nome;
 	@Column
-	private String datadaEdicao;
+	private String dataDaEdicao;
 	@Column
 	private Autor autor;
 	
@@ -38,12 +38,12 @@ public abstract class Livro
 	
 	public String getDatadaEdicao() 
 	{
-		return datadaEdicao;
+		return dataDaEdicao;
 	}
 	
 	public void setDatadaEdicao(String datadaEdicao) 
 	{
-		this.datadaEdicao = datadaEdicao;
+		this.dataDaEdicao = datadaEdicao;
 	}
 	
 	public Autor getAutor() 
