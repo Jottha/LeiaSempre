@@ -41,7 +41,11 @@
 		<!-- Mapeamento de Entidades -->
 		
 		<mapping class="Model.Autor" />
-
+		<mapping class="Model.Livro" />
+		<mapping class="Model.Pagamento" />
+		<mapping class="Model.LeitorClasseA" />
+		<mapping class="Model.LeitorClasseB" />
+		<mapping class="Model.LeitorClasseC" />
 		
 	
 	</session-factory>
