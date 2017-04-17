@@ -1,13 +1,11 @@
 package controller;
 
-import java.util.List;
 import model.Autor;
 import dao.AutorDao;
 
 public class AutorController 
 {	
 	private AutorDao autorDao;
-	private Autor autor;
 	
 	public AutorController()
 	{
@@ -29,12 +27,12 @@ public class AutorController
 		autorDao.atualizar(autor);
 	}
 	
-	public List<Autor> buscarNome(String nome) 
+	public antlr.collections.List buscarNome(String nome) throws Exception
 	{
 		return autorDao.buscarNome(nome);
 	}
 
-	public Autor buscarAutor(int id) 
+	public Autor buscarAutor(int id) throws Exception
 	{
 		return autorDao.buscarAutor(id);
 	}

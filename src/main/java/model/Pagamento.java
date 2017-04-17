@@ -1,10 +1,24 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "pagamento")
 public abstract class Pagamento 
 {	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int idPagamento;
+	@Column
 	private double valor;
+	@Column
 	private String forma;
+	
 	public abstract void Pagar(double valor, String forma);
 	
 	public Pagamento(int idPagamento, double valor, String forma) 

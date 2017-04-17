@@ -1,10 +1,7 @@
 package controller;
 
-import java.util.List;
-
 import model.Pagamento;
 import dao.PagamentoDao;
-
 
 
 public class PagamentoController 
@@ -31,12 +28,12 @@ public class PagamentoController
 		pagamentoDao.atualizar(pagamento);
 	}
 	
-	public List<Pagamento> buscarValor(String valor) 
+	public antlr.collections.List buscarValor(double valor) throws Exception
 	{
 		return pagamentoDao.buscarValor(valor);
 	}
 
-	public Pagamento buscarPagamento(int id) 
+	public Pagamento buscarPagamento(int id) throws Exception
 	{
 		return pagamentoDao.buscarPagamento(id);
 	}

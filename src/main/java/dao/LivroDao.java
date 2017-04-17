@@ -64,12 +64,12 @@ public class LivroDao
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Livro> listar() 
+	public List listar() 
 	{	SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		try 
 		{	Criteria consulta = session.createCriteria(Livro.class);
-			List<Livro> resultado = consulta.list();
+			List resultado = (List) consulta.list();
 			return resultado;
 		} catch (RuntimeException erro) 
 		{	throw erro;
@@ -78,13 +78,13 @@ public class LivroDao
 		}
 	}
 	
-	public List<Livro> buscarNome(String nome) 
+	public List buscarNome(String nome) 
 	{	SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		try 
 		{	Criteria crit = session.createCriteria(Livro.class);
 			crit.add(Restrictions.eq("nome", nome));
-			List list = crit.list();
+			List list = (List) crit.list();
 			return list;
 		} catch (RuntimeException erro)
 		{	throw erro;
@@ -111,13 +111,13 @@ public class LivroDao
 	}
 	
 	@SuppressWarnings("deprecation")
-	public List<Livro> buscarDataDaEdicao(String dataDaEdicao) 
+	public List buscarDataDaEdicao(String dataDaEdicao) 
 	{	SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		try 
 		{	Criteria crit = session.createCriteria(Livro.class);
 			crit.add(Restrictions.eq("dataDaEdicao", dataDaEdicao));
-			List list = crit.list();
+			List list = (List) crit.list();
 			return list;
 		} catch (RuntimeException erro) 
 		{	throw erro;

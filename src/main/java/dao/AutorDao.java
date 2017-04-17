@@ -65,12 +65,12 @@ public class AutorDao
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<Autor> listar() 
+	public List listar() 
 	{	SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		try 
 		{	Criteria consulta = session.createCriteria(Autor.class);
-			List<Autor> resultado = consulta.list();
+			List resultado = (List) consulta.list();
 			return resultado;
 		} catch (RuntimeException erro) 
 		{	throw erro;
@@ -79,7 +79,7 @@ public class AutorDao
 		}
 	}
 
-	public List<Autor> buscarNome(String nome) 
+	public List buscarNome(String nome) 
 	{	SessionFactory factory = new Configuration().configure().buildSessionFactory();
 		Session session = factory.openSession();
 		try 

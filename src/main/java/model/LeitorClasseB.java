@@ -1,10 +1,24 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "leitorClasseB")
 public class LeitorClasseB extends Pagamento implements ILeitorClasseB
 {	
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private int idLeitorB;
+	@Column
 	private String nome;
+	@Column
 	private String CPF;
+	@Column
 	private String situacao;
 		
 	public LeitorClasseB(int idPagamento, double valor, String forma, 

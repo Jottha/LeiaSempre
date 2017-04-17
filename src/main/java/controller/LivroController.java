@@ -1,6 +1,5 @@
 package controller;
 
-import java.util.List;
 import model.Livro;
 import dao.LivroDao;
 
@@ -29,17 +28,17 @@ public class LivroController
 		livroDao.atualizar(livro);
 	}
 	
-	public List<Livro> buscarNome(String nome) 
+	public antlr.collections.List buscarNome(String nome) throws Exception
 	{
 		return livroDao.buscarNome(nome);
 	}
 
-	public Livro buscarAutor(int id) 
+	public Livro buscarAutor(int id) throws Exception
 	{
 		return livroDao.buscarLivro(id);
 	}
 	
-	public List<Livro> buscarDataDaEdicao(String dataDaEdicao) 
+	public antlr.collections.List buscarDataDaEdicao(String dataDaEdicao) throws Exception
 	{
 		return livroDao.buscarDataDaEdicao(dataDaEdicao);
 	}
